@@ -1,0 +1,14 @@
+# Optional vocal-isolation engines for "Free AI Voice Clone".
+#
+# The backend always falls back to an FFmpeg centre-channel + speech-bandpass
+# filter, so these are optional. Install Demucs (best quality) OR Audio
+# Separator, not necessarily both.
+#
+#   pip install -r requirements-voice-clone.txt
+#
+# Demucs pulls in PyTorch (large). On CPU it still works, just slower.
+demucs>=4.0.1,<5.0.0
+
+# Audio Separator is an alternative that uses ONNX models instead of PyTorch.
+# Uncomment if you prefer it over Demucs.
+# audio-separator>=0.28.0,<1.0.0
